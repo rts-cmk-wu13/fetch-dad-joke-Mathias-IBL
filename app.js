@@ -5,13 +5,13 @@ fetch("https://icanhazdadjoke.com",{
 })
 
 .then(response => response.json()).then(function(data) {
-    // console.log(data);
+    console.log(data);
     let jokeDiv = document.querySelector(".joke")
-    let pElm = document.createElement("p");
-    pElm.classList.add("jokeText")
+    let divElm = document.createElement("div");
+    divElm.classList.add("jokeText")
  
-    pElm.innerHTML = `
+    divElm.innerHTML = `
         <p>${data.joke}</p>
     `
-    jokeDiv.append(pElm);
+    jokeDiv.append(divElm);
 })
